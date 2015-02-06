@@ -7,10 +7,25 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div id="container">Loading...</div>
+    <section id="todoapp">
+        <header id="header">
+            <h1>Блокнот</h1>
+            <input id="new-todo" placeholder="Введите напоминание">
+        </header>
+    <section id="main">
+        <ul id="todo-list"></ul>
+    </section>
+    </section>
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="js/backbone-min.js"></script>
+    <script src="js/backbone.localStorage-min.js"></script>
+    <script type="text/template" id="item-template">
+        <div class="view">
+            <input class="toggle" type="checkbox">
+            <label><%- title %></label>
+        </div>
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
